@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="asset_tracker_db" Class="AssetTrackerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BRANDON-PC1\SQLEXPRESS2005;Initial Catalog=asset_tracker_db;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ApplicationServices" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.asset" Member="assets">
+    <Type Name="asset">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sku" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="add_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_scan" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="room" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="facility" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="facility_asset" Member="facility1" ThisKey="facility" OtherKey="id" Type="facility" IsForeignKey="true" />
+      <Association Name="room_asset" Member="room1" ThisKey="room" OtherKey="id" Type="room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.facility" Member="facilities">
+    <Type Name="facility">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="add_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="facility_asset" Member="assets" ThisKey="id" OtherKey="facility" Type="asset" />
+      <Association Name="facility_room" Member="rooms" ThisKey="id" OtherKey="facility" Type="room" />
+    </Type>
+  </Table>
+  <Table Name="dbo.room" Member="rooms">
+    <Type Name="room">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="add_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="facility" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="room_asset" Member="assets" ThisKey="id" OtherKey="room" Type="asset" />
+      <Association Name="facility_room" Member="facility1" ThisKey="facility" OtherKey="id" Type="facility" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

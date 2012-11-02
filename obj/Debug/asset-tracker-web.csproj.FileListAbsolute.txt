@@ -1,0 +1,5 @@
+c:\users\brandon\documents\visual studio 2010\Projects\asset-tracker-web\asset-tracker-web\bin\asset-tracker-web.dll
+c:\users\brandon\documents\visual studio 2010\Projects\asset-tracker-web\asset-tracker-web\bin\asset-tracker-web.pdb
+c:\users\brandon\documents\visual studio 2010\Projects\asset-tracker-web\asset-tracker-web\obj\Debug\ResolveAssemblyReference.cache
+c:\users\brandon\documents\visual studio 2010\Projects\asset-tracker-web\asset-tracker-web\obj\Debug\asset-tracker-web.dll
+c:\users\brandon\documents\visual studio 2010\Projects\asset-tracker-web\asset-tracker-web\obj\Debug\asset-tracker-web.pdb

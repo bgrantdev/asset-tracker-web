@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AssetTracker.Master.cs" Inherits="asset_tracker_web.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/AssetTracker.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div id="bannerWrapper">
+            <img id="bannerImage" alt="banner" src="/Images/layout/banner.png" />
+        
+            <asp:LoginView ID="Logout" runat="server" >
+            <LoggedInTemplate>
+                <p class="loginWrapper">
+                <asp:LoginStatus ID="LoginStatus" runat="server" LogoutAction="RedirectToLoginPage" LogoutText="Logout" CssClass="floatRight" />
+                </p>
+            </LoggedInTemplate>
+            <AnonymousTemplate>
+            
+            </AnonymousTemplate>
+            </asp:LoginView>
+        </div>
+        <asp:LoginView ID="LoginMenu" runat="server">
+        <LoggedInTemplate>
+        <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" >
+            <Items>
+               <asp:MenuItem NavigateUrl="~/Pages/Inventory/Facilities.aspx" Text="Inventory Manager" />  
+               <asp:MenuItem NavigateUrl="" Text="Barcode Manager" />
+            </Items>
+        </asp:Menu>
+        </LoggedInTemplate>
+        <AnonymousTemplate></AnonymousTemplate>
+        </asp:LoginView>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+   margin: 0px; 
+    
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    
+}
+
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+
+/* MASTER PAGE
+----------------------------------------------------------*/
+
+#bannerWrapper
+{
+    height: 74px;
+    background-color:#D9D7D7;
+}
+
+#bannerImage
+{
+    float: left;
+        
+}
+
+.loginWrapper
+{
+    text-align:right;
+    margin: 0px;
+}
+
+div.navmenu
+{
+    
+}
