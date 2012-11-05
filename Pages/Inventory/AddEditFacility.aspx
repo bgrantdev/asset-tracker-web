@@ -2,9 +2,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <form runat="server">
-    <asp:Label runat="server"></asp:Label>
-    <asp:TextBox runat="server"></asp:TextBox>
-    </form>
+
+    <br /><br />
+
+    <div>
+        <asp:Menu runat="server" Orientation="Vertical">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Pages/Inventory/Facilities.aspx" Text="Facilities"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    </div>
+
+    <asp:Label runat="server" Text="Name:"></asp:Label>
+    <asp:TextBox runat="server" ID="FacilityName"></asp:TextBox>
+
+    <br /><br />
+
+    <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="submitFacility"/>
 
 </asp:Content>

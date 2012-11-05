@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
@@ -12,8 +13,35 @@ namespace asset_tracker_web
 
         void Application_Start(object sender, EventArgs e)
         {
-            // Code that runs on application startup
+            RegisterRoutes(RouteTable.Routes);
+        }
 
+        private void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute(
+                "FacilityRoute", 
+                "Facility/{facility_id}", 
+                "~/Pages/Inventory/Facility.aspx", true);
+
+            routes.MapPageRoute(
+                "AddRoom",
+                "AddRoom/{facility_id}",
+                "~/Pages/Inventory/AddEditRoom.aspx", true);
+
+            routes.MapPageRoute(
+                "RoomRoute",
+                "Room/{facility_id}/{room_id}",
+                "~/Pages/Inventory/Room.aspx", true);
+
+            routes.MapPageRoute(
+                "AddAsset",
+                "AddAsset/{facility_id}/{room_id}",
+                "~/Pages/Inventory/AddEditAsset.aspx", true);
+
+            routes.MapPageRoute(
+                "ViewAsset",
+                "ViewAsset/{asset_id}",
+                "~/Pages/Inventory/Asset.aspx", true);
         }
 
         void Application_End(object sender, EventArgs e)

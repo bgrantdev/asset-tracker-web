@@ -39,7 +39,26 @@ p
     line-height: normal;
 }
 
+/* General
+----------------------------------------------------------*/
+    
+ .optionsMenuWrapper
+ {
+    float:left;
+    width: 10%;
+    height: 100%; 
+ }
 
+
+.floatLeft
+{
+    float:left;
+}
+
+.floatRight
+{
+    float: right;
+}
 
 /* MASTER PAGE
 ----------------------------------------------------------*/
@@ -65,4 +84,14 @@ p
 div.navmenu
 {
     
+}
+
+/* FACILITIES PAGE
+----------------------------------------------------------*/
+
+.facilityTableWrapper
+{
+    width: 90%;
+    margin-right: 0px;
+    margin-left: auto;
 }

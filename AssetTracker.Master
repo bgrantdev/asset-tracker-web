@@ -35,6 +35,7 @@
         </LoggedInTemplate>
         <AnonymousTemplate></AnonymousTemplate>
         </asp:LoginView>
+        
     <asp:ContentPlaceHolder ID="MainContent" runat="server">
         
     </asp:ContentPlaceHolder>

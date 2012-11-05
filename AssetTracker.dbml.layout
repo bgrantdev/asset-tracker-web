@@ -2,43 +2,43 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AssetTracker">
   <DataContextMoniker Name="/AssetTrackerDataContext" />
   <nestedChildShapes>
-    <classShape Id="e63c9da7-07a6-4fa4-b551-80ba122382a9" absoluteBounds="1.375, 1.125, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/AssetTrackerDataContext/asset" />
-      <nestedChildShapes>
-        <elementListCompartment Id="53bca68f-8f08-4b0e-9938-e085e347f003" absoluteBounds="1.3900000000000001, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="d84ffbd3-fca6-4365-94fd-fed9a62035e6" absoluteBounds="5.5, 1.625, 2, 1.5785953776041666">
       <DataClassMoniker Name="/AssetTrackerDataContext/facility" />
       <nestedChildShapes>
         <elementListCompartment Id="6729da5b-09a5-4a5b-9c34-5479454f751c" absoluteBounds="5.515, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5 : 2.41429768880208); (4.92708333333333 : 2.41429768880208 : JumpStart); (4.76041666666667 : 2.41429768880208 : JumpEnd); (3.375 : 2.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/AssetTrackerDataContext/facility/facility_asset" />
-      <nodes>
-        <classShapeMoniker Id="d84ffbd3-fca6-4365-94fd-fed9a62035e6" />
-        <classShapeMoniker Id="e63c9da7-07a6-4fa4-b551-80ba122382a9" />
-      </nodes>
-    </associationConnector>
     <classShape Id="87a7ef1d-07d0-43a1-b461-6cf19a9063c6" absoluteBounds="4.25, 4.75, 2, 1.5785953776041666">
       <DataClassMoniker Name="/AssetTrackerDataContext/room" />
       <nestedChildShapes>
         <elementListCompartment Id="252c0ad3-02f4-444a-b905-a6cff6e7f158" absoluteBounds="4.265, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.84375 : 4.75); (4.84375 : 1.34375); (3.375 : 1.34375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/AssetTrackerDataContext/room/room_asset" />
-      <nodes>
-        <classShapeMoniker Id="87a7ef1d-07d0-43a1-b461-6cf19a9063c6" />
-        <classShapeMoniker Id="e63c9da7-07a6-4fa4-b551-80ba122382a9" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5.875 : 3.20359537760417); (5.875 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.875 : 3.20359537760417); (5.875 : 4.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/AssetTrackerDataContext/facility/facility_room" />
       <nodes>
         <classShapeMoniker Id="d84ffbd3-fca6-4365-94fd-fed9a62035e6" />
         <classShapeMoniker Id="87a7ef1d-07d0-43a1-b461-6cf19a9063c6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="715d5728-b563-4f6c-936e-7e62f533999b" absoluteBounds="1.5, 1.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AssetTrackerDataContext/asset" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3175b22f-9277-4341-b7d1-fe6a9cff6825" absoluteBounds="1.5150000000000001, 2.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.53929768880208); (3.5 : 2.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetTrackerDataContext/facility/facility_asset" />
+      <nodes>
+        <classShapeMoniker Id="d84ffbd3-fca6-4365-94fd-fed9a62035e6" />
+        <classShapeMoniker Id="715d5728-b563-4f6c-936e-7e62f533999b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.84375 : 4.75); (4.84375 : 3.64829752604167); (3.5 : 3.64829752604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetTrackerDataContext/room/room_asset" />
+      <nodes>
+        <classShapeMoniker Id="87a7ef1d-07d0-43a1-b461-6cf19a9063c6" />
+        <classShapeMoniker Id="715d5728-b563-4f6c-936e-7e62f533999b" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
