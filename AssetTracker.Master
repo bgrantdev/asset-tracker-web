@@ -24,21 +24,24 @@
             </AnonymousTemplate>
             </asp:LoginView>
         </div>
-        <asp:LoginView ID="LoginMenu" runat="server">
+        <asp:LoginView ID="LoginMenu" runat="server" >
         <LoggedInTemplate>
-        <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" >
+        <div class="clear">
+        <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" CssClass="navmenu" IncludeStyleBlock="false" >
             <Items>
                <asp:MenuItem NavigateUrl="~/Pages/Inventory/Facilities.aspx" Text="Inventory Manager" />  
                <asp:MenuItem NavigateUrl="" Text="Barcode Manager" />
             </Items>
         </asp:Menu>
+        </div>
         </LoggedInTemplate>
         <AnonymousTemplate></AnonymousTemplate>
         </asp:LoginView>
-        
-    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    <div class="contentWrapper">   
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"  >
         
     </asp:ContentPlaceHolder>
+    </div>
     </form>
 </body>
 </html>

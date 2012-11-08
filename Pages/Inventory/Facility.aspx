@@ -15,13 +15,14 @@
         </asp:Menu>
     </div>
 
-    <div class="facilityTableWrapper">
+    <div class="infoTableWrapper">
     <asp:GridView
         ID="roomGrid"
         runat="server"
         ShowHeaderWhenEmpty="true" 
         AutoGenerateSelectButton="true"
-        OnSelectedIndexChanged="roomSelected" >
+        OnSelectedIndexChanged="roomSelected"
+        CssClass="infoGrid" >
     </asp:GridView>
     </div>
 

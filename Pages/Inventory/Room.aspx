@@ -8,20 +8,22 @@
     <div class="optionsMenuWrapper">
         <asp:Menu ID="OptionsMenu"
             runat="server"
-            Orientation="Vertical">
+            Orientation="Vertical"
+            CssClass="optionsMenu" >
             <Items>
                 <asp:MenuItem Text="Add Asset" Value="AddAsset"></asp:MenuItem>            
             </Items>
             </asp:Menu>
     </div>
 
-    <div class="facilityTableWrapper">
+    <div class="infoTableWrapper">
     <asp:GridView
         ID="assetGrid"
         runat="server"
         ShowHeaderWhenEmpty="true" 
         AutoGenerateSelectButton="true"
-        OnSelectedIndexChanged="assetSelected" >
+        OnSelectedIndexChanged="assetSelected"
+        CssClass="infoGrid" >
     </asp:GridView>    
     </div>
 

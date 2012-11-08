@@ -3,8 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <br /><br />
-    
     <div class="optionsMenuWrapper">
         <asp:Menu runat="server"
          Orientation="Vertical">
@@ -14,13 +12,16 @@
         </asp:Menu>
     </div>
 
-   <div class="facilityTableWrapper">
+   <div class="infoTableWrapper">
    <asp:GridView
         ID="facilityGrid"
         runat="server"
         ShowHeaderWhenEmpty="true" 
         AutoGenerateSelectButton="true"
-        OnSelectedIndexChanged="facilitySelected" >
+        OnSelectedIndexChanged="facilitySelected"
+        CssClass="infoGrid" >
     </asp:GridView>
     </div>
+
+    <div style="clear:both"></div>
 </asp:Content>
