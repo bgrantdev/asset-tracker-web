@@ -24,7 +24,7 @@ p
     float:left;
     width: 11%;
     height: 800px;
-    background-color: #564DFA;
+    background-color: #D9D7D7;
  }
  
  div.optionsMenu
@@ -62,7 +62,7 @@ p
      list-style-type: none;
      width: 100%;
      text-align: center;
-     background-color: #94F2F7;
+     background-color: #D9D7D7;
  }
 
 .floatLeft
@@ -98,7 +98,7 @@ div.contentWrapper
 
 .infoGrid th
 {
-    background-color: #ADACAC;
+    background-color: #7C7C7D;
     color: White;
 }
 
@@ -109,9 +109,9 @@ div.contentWrapper
     text-align: center;
 }
 
-.ingoGrid .alt
+.infoGrid .alt
 {
-    
+    background-color: #D9D7D7;
     
 }
 
@@ -124,13 +124,36 @@ div.contentWrapper
     padding-top: 50px;
 }
 
+.label
+{
+    font-family: Lucida Sans;
+    font-size: medium;
+}
+
+.field
+{
+    font-family: Lucida Sans;
+    font-size:medium;
+}    
+
+.submit_button
+{
+    font-family: Lucida Sans;
+    font-size:medium;   
+}
+
+.formWrapper
+{
+    padding-left: 50px;   
+}
+
 
 /* MASTER PAGE
 ----------------------------------------------------------*/
 
 #bannerWrapper
 {
-    height: 74px;
+    height: 75px;
     background-color:#D9D7D7;
 }
 
