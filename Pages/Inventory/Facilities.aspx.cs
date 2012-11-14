@@ -25,7 +25,7 @@ namespace asset_tracker_web.Pages.Inventory
                              {
                                  ID = f.id,
                                  Name = f.name,
-                                 DateAdded = f.add_date,
+                                 DateAdded = f.add_date.ToShortDateString(),
                                  Rooms = rooms.Count(),
                                  Assets = assets.Count(),
                              };

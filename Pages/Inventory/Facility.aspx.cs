@@ -28,7 +28,7 @@ namespace asset_tracker_web.Pages.Inventory
                         {
                             ID = r.id,
                             Name = r.name,
-                            DateAdded = r.add_date,
+                            DateAdded = r.add_date.ToShortDateString(),
                             Assets = rooms.Count(),
                         };
             roomGrid.DataSource = facility_rooms;

@@ -3,13 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <br /><br />
-
     <div class="optionsMenuWrapper">
         <asp:Menu ID="OptionsMenu"
             runat="server"
             Orientation="Vertical"
-            CssClass="optionsMenu" >
+            CssClass="optionsMenu"
+            IncludeStyleBlock="false" >
             <Items>
                 <asp:MenuItem Text="Add Asset" Value="AddAsset"></asp:MenuItem>            
             </Items>

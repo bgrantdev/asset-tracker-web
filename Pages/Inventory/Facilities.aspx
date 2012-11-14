@@ -4,8 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="optionsMenuWrapper">
-        <asp:Menu runat="server"
-         Orientation="Vertical">
+        <asp:Menu ID="optionsMenu" runat="server"
+         Orientation="Vertical"
+         CssClass="optionsMenu"
+         IncludeStyleBlock="false" >
             <Items>
                 <asp:MenuItem NavigateUrl="~/Pages/Inventory/AddEditFacility.aspx" Text="Add Facility"></asp:MenuItem>           
             </Items>

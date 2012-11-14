@@ -32,8 +32,8 @@ namespace asset_tracker_web.Pages.Inventory
                                   ID = a.id,
                                   Name = a.name,
                                   SKU = a.sku,
-                                  LastScan = a.last_scan,
-                                  DateAdded = a.add_date,
+                                  LastScan = a.last_scan.ToShortDateString(),
+                                  DateAdded = a.add_date.ToShortDateString(),
                               };
             assetGrid.DataSource = room_assets;
             assetGrid.DataBind();

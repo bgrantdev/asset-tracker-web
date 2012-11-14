@@ -3,14 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <br /><br />
-
     <div class="optionsMenuWrapper">
         <asp:Menu ID="OptionsMenu"
          runat="server"
-         Orientation="Vertical">
+         Orientation="Vertical"
+         CssClass="optionsMenu"
+         IncludeStyleBlock="false" >
             <Items>
-                <asp:MenuItem NavigateUrl="~/Pages/Inventory/AddEditRoom.aspx" Text="Add Room" Value="AddRoom"></asp:MenuItem>           
+                <asp:MenuItem NavigateUrl="~/Pages/Inventory/AddEditRoom.aspx" Text=" Add  Room " Value="AddRoom"></asp:MenuItem>           
             </Items>
         </asp:Menu>
     </div>
