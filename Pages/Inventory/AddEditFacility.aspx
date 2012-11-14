@@ -5,19 +5,13 @@
 
     <br /><br />
 
-    <div>
-        <asp:Menu runat="server" Orientation="Vertical">
-            <Items>
-                <asp:MenuItem NavigateUrl="~/Pages/Inventory/Facilities.aspx" Text="Facilities"></asp:MenuItem>
-            </Items>
-        </asp:Menu>
-    </div>
-
-    <asp:Label runat="server" Text="Name:"></asp:Label>
-    <asp:TextBox runat="server" ID="FacilityName"></asp:TextBox>
-
+    <div class="formWrapper">
+    <asp:Label CssClass="label" runat="server" Text="Name:"></asp:Label>
+    <br />
+    <asp:TextBox CssClass="field" runat="server" ID="FacilityName"></asp:TextBox>
+    
     <br /><br />
 
-    <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="submitFacility"/>
-
+    <asp:Button CssClass="submit_button" ID="SubmitButton" runat="server" Text="Submit" OnClick="submitFacility"/>
+    </div>
 </asp:Content>

@@ -4,16 +4,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <br /><br />
-
-    <asp:Panel ID="MessagePanel" CssClass="" Visible="false" runat="server">
-        <asp:Label ID="Message" runat="server"></asp:Label>
-    </asp:Panel>
-
-    <asp:Label runat="server" Text="Name:"></asp:Label>
-    <asp:TextBox runat="server" ID="RoomName" ></asp:TextBox>
+    
+    <div class="formWrapper">
+    <asp:Label CssClass="label" runat="server" Text="Name:"></asp:Label>
+    <br />
+    <asp:TextBox CssClass="field" runat="server" ID="RoomName" ></asp:TextBox>
+    
 
     <br /><br />
 
     <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="submitRoom" />
+    </div>
 
 </asp:Content>

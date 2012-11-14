@@ -3,14 +3,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Label runat="server" Text="Name:"></asp:Label>
-    <asp:TextBox runat="server" ID="assetName"></asp:TextBox>
+    <br /><br />
+
+    <div class="formWrapper">
+    <asp:Label CssClass="label" runat="server" Text="Name:"></asp:Label>
+    <br />
+    <asp:TextBox CssClass="field" runat="server" ID="assetName"></asp:TextBox>
     <br />
 
-    <asp:Label  runat="server" Text="SKU:"></asp:Label>
-    <asp:TextBox runat="server" ID="assetSku"></asp:TextBox>
+    <asp:Label CssClass="label" runat="server" Text="SKU:"></asp:Label>
     <br />
+    <asp:TextBox CssClass="field" runat="server" ID="assetSku"></asp:TextBox>
+    <br /><br />
 
     <asp:Button runat="server" ID="SubmitButton" Text="Submit" OnClick="addAsset" /> 
+    </div>
 
 </asp:Content>

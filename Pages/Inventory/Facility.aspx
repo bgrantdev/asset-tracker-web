@@ -22,7 +22,8 @@
         ShowHeaderWhenEmpty="true" 
         AutoGenerateSelectButton="true"
         OnSelectedIndexChanged="roomSelected"
-        CssClass="infoGrid" >
+        CssClass="infoGrid"
+        AlternatingRowStyle-CssClass="alt" >
     </asp:GridView>
     </div>
 
