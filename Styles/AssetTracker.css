@@ -212,7 +212,47 @@ div.navmenu a
     padding: 5px 10px;
 }
 
+/* DEFAULT PAGE
+----------------------------------------------------------*/
+
+.introWrapper
+{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.info
+{
+    line-height: 25px;
+    letter-spacing 25px;
+    font-family: Lucida Sans;
+    font-size:large;
+    color: Gray;
+    padding: 20px;
+    width: 800px;
+    
+}
 
 /* FACILITIES PAGE
 ----------------------------------------------------------*/
 
+
+
+
+/* ASSET PAGE
+----------------------------------------------------------*/
+
+div.assetDetails
+{
+    padding-left: 50px;
+    padding-top: 50px;     
+}
+
+.assetGrid td
+{
+    font-family: Lucida Sans;
+    text-align: center;
+    width: 50px;
+    padding: 10px
+       
+}
