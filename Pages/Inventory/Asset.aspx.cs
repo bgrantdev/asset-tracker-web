@@ -20,8 +20,28 @@ namespace asset_tracker_web.Pages.Inventory
 
             var asset = from a in db.assets
                         where a.id == i_Asset
-                        select a;
+                        select new
+                        {
+                            Name = a.name,
+                            SKU = a.sku,
+                            DateAdded = a.add_date.ToShortDateString(),
+                            LastScan = a.last_scan.ToShortDateString(),
+                        };
 
+            asset selected_asset = (from a in db.assets
+                                    where a.id == i_Asset
+                                    select a).Single();
+
+            facility selected_facility = (from f in db.facilities
+                                          where f.id == selected_asset.facility
+                                          select f).Single();
+
+            room selected_room = (from r in db.rooms
+                                  where r.id == selected_asset.room
+                                  select r).Single();
+
+            FacilityName.Text = "Facility: " + selected_facility.name;
+            RoomName.Text = "Room: " + selected_room.name;
             AssetDetails.DataSource = asset;
             AssetDetails.DataBind();
         }

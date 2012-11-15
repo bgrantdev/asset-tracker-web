@@ -24,6 +24,17 @@ namespace asset_tracker_web.Pages.Inventory
 
             OptionsMenu.FindItem("AddAsset").NavigateUrl = GetRouteUrl("AddAsset", new { facility_id = s_Facility, room_id = s_Room });
 
+            facility selected_facility = (from f in db.facilities
+                                          where f.id == i_Facility
+                                          select f).Single();
+
+            room selected_room = (from r in db.rooms
+                                  where r.id == i_Room
+                                  select r).Single();
+
+            FacilityName.Text = "Facility: " + selected_facility.name;
+            RoomName.Text = "Room: " + selected_room.name;
+
             var room_assets = from a in db.assets
                               where a.room == i_Room &&
                               a.facility == i_Facility

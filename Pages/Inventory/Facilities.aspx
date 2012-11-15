@@ -15,6 +15,9 @@
     </div>
 
    <div class="infoTableWrapper">
+
+   <asp:Label runat="server"></asp:Label>
+
    <asp:GridView
         ID="facilityGrid"
         runat="server"

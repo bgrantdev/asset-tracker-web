@@ -21,6 +21,12 @@ namespace asset_tracker_web.Pages.Inventory
 
             OptionsMenu.FindItem("AddRoom").NavigateUrl = GetRouteUrl("AddRoom", new {facility_id = id });
 
+            facility selected_facility = (from f in db.facilities
+                                     where f.id == facility_id
+                                     select f).Single();
+
+            FacilityName.Text = "Facility: " + selected_facility.name;
+
             var facility_rooms = from r in db.rooms
                         join a in db.assets on r.id equals a.room into rooms
                         where r.facility == facility_id
@@ -31,6 +37,7 @@ namespace asset_tracker_web.Pages.Inventory
                             DateAdded = r.add_date.ToShortDateString(),
                             Assets = rooms.Count(),
                         };
+            
             roomGrid.DataSource = facility_rooms;
             roomGrid.DataBind();
         }
