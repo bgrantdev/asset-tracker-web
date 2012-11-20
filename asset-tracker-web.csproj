@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="AssetTrackerAPI.asmx" />
     <Content Include="Images\layout\banner.png" />
     <Content Include="Pages\Inventory\AddEditAsset.aspx" />
     <Content Include="Pages\Inventory\AddEditFacility.aspx" />
@@ -94,6 +95,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AssetTracker.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AssetTrackerAPI.asmx.cs">
+      <DependentUpon>AssetTrackerAPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
