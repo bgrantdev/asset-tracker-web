@@ -8,6 +8,7 @@
       <Column Name="user_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Association Name="facility_room" Member="rooms" ThisKey="id" OtherKey="facility" Type="room" />
       <Association Name="facility_asset" Member="assets" ThisKey="id" OtherKey="facility" Type="asset" />
+      <Association Name="facility_address" Member="addresses" ThisKey="id" OtherKey="facility_id" Type="address" />
     </Type>
   </Table>
   <Table Name="dbo.room" Member="rooms">
@@ -31,6 +32,18 @@
       <Column Name="facility" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="facility_asset" Member="facility1" ThisKey="facility" OtherKey="id" Type="facility" IsForeignKey="true" />
       <Association Name="room_asset" Member="room1" ThisKey="room" OtherKey="id" Type="room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.address" Member="addresses">
+    <Type Name="address">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="facility_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="line_1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="line_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="zip" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="facility_address" Member="facility" ThisKey="facility_id" OtherKey="id" Type="facility" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
