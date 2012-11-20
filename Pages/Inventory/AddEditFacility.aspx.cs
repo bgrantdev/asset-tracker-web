@@ -32,6 +32,15 @@ namespace asset_tracker_web.Pages.Inventory
             try
             {
                 db.SubmitChanges();
+                address facility_address = new address();
+                facility_address.line_1 = Address1.Text;
+                facility_address.line_2 = Address2.Text;
+                facility_address.city = CityName.Text;
+                facility_address.state = StateName.Text;
+                facility_address.zip = ZipName.Text;
+                facility_address.facility_id = new_facility.id;
+                db.addresses.InsertOnSubmit(facility_address);
+                db.SubmitChanges();
                 Response.Redirect("~/Pages/Inventory/Facilities.aspx");
             }
             catch (Exception exception)

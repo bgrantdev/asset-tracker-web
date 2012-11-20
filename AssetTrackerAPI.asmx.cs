@@ -17,7 +17,7 @@ namespace asset_tracker_web
     public class AssetTrackerAPI : System.Web.Services.WebService
     {
 
-
+        #region Facilities
 
         [WebMethod]
         public string GetFacilties()
@@ -44,13 +44,15 @@ namespace asset_tracker_web
             return true;
         }
 
+        #endregion
+
+        #region Rooms
 
         [WebMethod]
         public string GetRooms(int facility_id)
         {
             return "";
         }
-
 
         [WebMethod]
         public string GetRoom(int room_id)
@@ -69,6 +71,10 @@ namespace asset_tracker_web
         {
             return true;
         }
+
+        #endregion
+
+        #region Assets
 
         [WebMethod]
         public string GetFacilityAssets(int facility_id)
@@ -93,6 +99,8 @@ namespace asset_tracker_web
         {
             return true;
         }
+
+        #endregion
 
     }
 }
