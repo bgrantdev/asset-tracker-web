@@ -13,22 +13,22 @@ namespace asset_tracker_web.Pages.Inventory {
     public partial class AddEditAsset {
         
         /// <summary>
-        /// assetName control.
+        /// AssetName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox assetName;
+        protected global::System.Web.UI.WebControls.TextBox AssetName;
         
         /// <summary>
-        /// assetSku control.
+        /// AssetSku control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox assetSku;
+        protected global::System.Web.UI.WebControls.TextBox AssetSku;
         
         /// <summary>
         /// SubmitButton control.

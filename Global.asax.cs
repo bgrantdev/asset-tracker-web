@@ -64,7 +64,7 @@ namespace asset_tracker_web
                 "EditAsset",
                 "EditAsset/{asset_id}",
                 "~/Pages/Inventory/AddEditAsset.aspx", true, null,
-                new RouteValueDictionary { { "facility_id", @"\d+" } });
+                new RouteValueDictionary { { "asset_id", @"\d+" } });
             
         }
 

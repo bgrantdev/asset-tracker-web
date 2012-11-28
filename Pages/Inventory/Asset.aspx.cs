@@ -10,16 +10,16 @@ namespace asset_tracker_web.Pages.Inventory
     public partial class Asset : System.Web.UI.Page
     {
         private AssetTrackerDataContext db = new AssetTrackerDataContext();
-        private String s_Asset;
-        private Int32 i_Asset;
+        private Int32 asset_id;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            s_Asset = Page.RouteData.Values["asset_id"] as String;
-            i_Asset = Int32.Parse(s_Asset);
+            asset_id = Convert.ToInt32(Page.RouteData.Values["asset_id"]);
+
+            OptionsMenu.FindItem("EditAsset").NavigateUrl = GetRouteUrl("EditAsset", new { asset_id = asset_id });
 
             var asset = from a in db.assets
-                        where a.id == i_Asset
+                        where a.id == asset_id
                         select new
                         {
                             Name = a.name,
@@ -29,7 +29,7 @@ namespace asset_tracker_web.Pages.Inventory
                         };
 
             asset selected_asset = (from a in db.assets
-                                    where a.id == i_Asset
+                                    where a.id == asset_id
                                     select a).Single();
 
             facility selected_facility = (from f in db.facilities

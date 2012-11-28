@@ -10,7 +10,7 @@
          CssClass="optionsMenu"
          IncludeStyleBlock="false" >
             <Items>
-                <asp:MenuItem NavigateUrl="~/Pages/Inventory/AddEditAsset.aspx" Text=" Edit Asset " Value="EditAsset"></asp:MenuItem>           
+                <asp:MenuItem Text=" Edit Asset " Value="EditAsset"></asp:MenuItem>           
             </Items>
         </asp:Menu>
     </div>
@@ -25,8 +25,7 @@
      ID="AssetDetails"
      CssClass="assetGrid" 
      HeaderText="Details"
-     HeaderStyle-BackColor="#D9D7D7"
-        >
+     HeaderStyle-BackColor="#D9D7D7" >
        
     </asp:DetailsView>
     </div>
