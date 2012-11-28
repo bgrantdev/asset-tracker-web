@@ -10,16 +10,15 @@ namespace asset_tracker_web.Pages.Inventory
     public partial class Facility : System.Web.UI.Page
     {
         private AssetTrackerDataContext db = new AssetTrackerDataContext();
-        private Int32 facility_id;
-        private String id;
+        private int facility_id;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //retrieve the facility id from passed data
-            id = Page.RouteData.Values["facility_id"] as String;
-            facility_id = Int32.Parse(id);
+            facility_id = Convert.ToInt32(Page.RouteData.Values["facility_id"]);
 
-            OptionsMenu.FindItem("AddRoom").NavigateUrl = GetRouteUrl("AddRoom", new {facility_id = id });
+            OptionsMenu.FindItem("EditFacility").NavigateUrl = GetRouteUrl("EditFacility", new { facility_id = facility_id });
+            OptionsMenu.FindItem("AddRoom").NavigateUrl = GetRouteUrl("AddRoom", new { facility_id = facility_id });
 
             facility selected_facility = (from f in db.facilities
                                      where f.id == facility_id
@@ -47,7 +46,7 @@ namespace asset_tracker_web.Pages.Inventory
             GridViewRow selected_row = roomGrid.SelectedRow;
             String selected_room_id = selected_row.Cells[1].Text;
 
-            Response.RedirectToRoute("RoomRoute", new { facility_id = id, room_id = selected_room_id }); 
+            Response.RedirectToRoute("RoomRoute", new { facility_id = facility_id, room_id = selected_room_id }); 
         }
     }
 }

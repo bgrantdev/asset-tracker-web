@@ -11,10 +11,9 @@ namespace asset_tracker_web.Pages.Inventory
 {
     public partial class Facilities : System.Web.UI.Page
     {
-
+        private Guid user_id = (Guid)Membership.GetUser(HttpContext.Current.User.Identity.Name).ProviderUserKey;
         private AssetTrackerDataContext db = new AssetTrackerDataContext();
-        Guid user_id = (Guid)Membership.GetUser(HttpContext.Current.User.Identity.Name).ProviderUserKey;
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             var facilities = from f in db.facilities
@@ -39,7 +38,7 @@ namespace asset_tracker_web.Pages.Inventory
             GridViewRow selected_row = facilityGrid.SelectedRow;
             String id = selected_row.Cells[1].Text;
             
-            Response.RedirectToRoute("FacilityRoute", new { facility_id = id });
+            Response.RedirectToRoute("ViewFacility", new { facility_id = id });
 
         }
     }

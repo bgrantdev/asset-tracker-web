@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="asset_tracker_db" Class="AssetTrackerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=BRANDON-PC1\SQLEXPRESS2005;Initial Catalog=asset_tracker_db;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ApplicationServices" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="asset-tracker-db" Class="AssetTrackerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=asset-tracker-db;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="asset_tracker_dbConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.facility" Member="facilities">
     <Type Name="facility">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -41,7 +41,7 @@
       <Column Name="line_1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="line_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="city" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="state" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="zip" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
       <Association Name="facility_address" Member="facility" ThisKey="facility_id" OtherKey="id" Type="facility" IsForeignKey="true" />
     </Type>

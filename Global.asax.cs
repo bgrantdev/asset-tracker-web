@@ -19,29 +19,53 @@ namespace asset_tracker_web
         private void RegisterRoutes(RouteCollection routes)
         {
             routes.MapPageRoute(
-                "FacilityRoute", 
-                "Facility/{facility_id}", 
-                "~/Pages/Inventory/Facility.aspx", true);
+                "ViewFacility", 
+                "ViewFacility/{facility_id}", 
+                "~/Pages/Inventory/Facility.aspx", true, null,
+                new RouteValueDictionary {{"facility_id", @"\d+" }} );
 
             routes.MapPageRoute(
-                "AddRoom",
-                "AddRoom/{facility_id}",
-                "~/Pages/Inventory/AddEditRoom.aspx", true);
-
-            routes.MapPageRoute(
-                "RoomRoute",
-                "Room/{facility_id}/{room_id}",
-                "~/Pages/Inventory/Room.aspx", true);
-
-            routes.MapPageRoute(
-                "AddAsset",
-                "AddAsset/{facility_id}/{room_id}",
-                "~/Pages/Inventory/AddEditAsset.aspx", true);
+                "ViewRoom",
+                "ViewRoom/{facility_id}/{room_id}",
+                "~/Pages/Inventory/Room.aspx", true, null,
+                new RouteValueDictionary { { "facility_id", @"\d+" }, {"room_id", @"\d+"} });
 
             routes.MapPageRoute(
                 "ViewAsset",
                 "ViewAsset/{asset_id}",
-                "~/Pages/Inventory/Asset.aspx", true);
+                "~/Pages/Inventory/Asset.aspx", true, null,
+                new RouteValueDictionary { { "asset_id", @"\d+" } });
+
+            routes.MapPageRoute(
+               "AddRoom",
+               "AddRoom/{facility_id}",
+               "~/Pages/Inventory/AddEditRoom.aspx", true, null,
+                new RouteValueDictionary { { "facility_id", @"\d+" } });
+
+            routes.MapPageRoute(
+                "AddAsset",
+                "AddAsset/{facility_id}/{room_id}",
+                "~/Pages/Inventory/AddEditAsset.aspx", true, null,
+                new RouteValueDictionary { { "facility_id", @"\d+" }, { "room_id", @"\d+" } });
+
+            routes.MapPageRoute(
+                "EditFacility",
+                "EditFacility/{facility_id}",
+                "~/Pages/Inventory/AddEditFacility.aspx", true, null,
+                new RouteValueDictionary { { "facility_id", @"\d+" } });
+
+            routes.MapPageRoute(
+                "EditRoom",
+                "EditRoom/{room_id}",
+                "~/Pages/Inventory/AddEditRoom.aspx", true, null,
+                new RouteValueDictionary { { "room_id", @"\d+" } });
+
+            routes.MapPageRoute(
+                "EditAsset",
+                "EditAsset/{asset_id}",
+                "~/Pages/Inventory/AddEditAsset.aspx", true, null,
+                new RouteValueDictionary { { "facility_id", @"\d+" } });
+            
         }
 
         void Application_End(object sender, EventArgs e)

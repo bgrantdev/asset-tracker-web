@@ -10,7 +10,8 @@
          CssClass="optionsMenu"
          IncludeStyleBlock="false" >
             <Items>
-                <asp:MenuItem NavigateUrl="~/Pages/Inventory/AddEditRoom.aspx" Text=" Add  Room " Value="AddRoom"></asp:MenuItem>           
+                <asp:MenuItem Text="Edit Facility" Value="EditFacility" />
+                <asp:MenuItem Text="Add Room" Value="AddRoom" />           
             </Items>
         </asp:Menu>
     </div>

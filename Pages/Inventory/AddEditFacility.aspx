@@ -32,6 +32,6 @@
     <br />
     <br /><br />
 
-    <asp:Button CssClass="submit_button" ID="SubmitButton" runat="server" Text="Submit" OnClick="submitFacility"/>
+    <asp:Button CssClass="submit_button" ID="SubmitButton" runat="server" Text="Submit" OnClick="submitFacility" />
     </div>
 </asp:Content>
