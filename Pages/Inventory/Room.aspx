@@ -10,7 +10,8 @@
             CssClass="optionsMenu"
             IncludeStyleBlock="false" >
             <Items>
-                <asp:MenuItem Text="Add Asset" Value="AddAsset"></asp:MenuItem>            
+                <asp:MenuItem Text="Edit Room" Value="EditRoom" />
+                <asp:MenuItem Text="Add Asset" Value="AddAsset" />            
             </Items>
             </asp:Menu>
     </div>

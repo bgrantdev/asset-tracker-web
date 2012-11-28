@@ -46,7 +46,7 @@ namespace asset_tracker_web.Pages.Inventory
             GridViewRow selected_row = roomGrid.SelectedRow;
             String selected_room_id = selected_row.Cells[1].Text;
 
-            Response.RedirectToRoute("RoomRoute", new { facility_id = facility_id, room_id = selected_room_id }); 
+            Response.RedirectToRoute("ViewRoom", new { facility_id = facility_id, room_id = selected_room_id }); 
         }
     }
 }

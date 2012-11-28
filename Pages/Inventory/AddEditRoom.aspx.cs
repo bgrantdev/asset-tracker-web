@@ -10,36 +10,52 @@ namespace asset_tracker_web.Pages.Inventory
     public partial class AddEditRoom : System.Web.UI.Page
     {
         private AssetTrackerDataContext db = new AssetTrackerDataContext();
-        private int facility_id;
-        private String fac_id;
+        private int facility_id, room_id;
+        private room selected_room = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Get the facility id
-            fac_id = (String)Page.RouteData.Values["facility_id"] as String;
-            facility_id = Int32.Parse(fac_id);
+            //If facility_id in values creating a new room
+            if (Page.RouteData.Values["facility_id"] != null)
+            {
+                facility_id = Convert.ToInt32(Page.RouteData.Values["facility_id"]);
+
+            }
+            //If room id in values then we are editing an existing rooom
+            else if (Page.RouteData.Values["room_id"] != null)
+            {
+                room_id = Convert.ToInt32(Page.RouteData.Values["room_id"]);
+                selected_room = (from r in db.rooms
+                                 where r.id == room_id
+                                 select r).Single();
+
+                facility_id = selected_room.facility;
+                if (!Page.IsPostBack)
+                {
+                    RoomName.Text = selected_room.name;
+                }
+            }
         }
 
         protected void submitRoom(Object sender, EventArgs e)
         {
-            room new_room = new room();
-            DateTime date = DateTime.Now;
-            String name = RoomName.Text;
-
-            new_room.add_date = date;
-            new_room.facility = facility_id;
-            new_room.name = name;
-            db.rooms.InsertOnSubmit(new_room);
-            try
+            //If selected room is null then creating a new room to add
+            if (selected_room == null)
             {
+                selected_room = new room();
+                selected_room.facility = facility_id;
+                selected_room.name = RoomName.Text;
+                selected_room.add_date = DateTime.Now;
+                db.rooms.InsertOnSubmit(selected_room);
                 db.SubmitChanges();
             }
-            catch (Exception exception)
+            //If not null then we are editing an existing room
+            else
             {
-
+                selected_room.name = RoomName.Text;
+                db.SubmitChanges();
             }
-            Response.RedirectToRoute("FacilityRoute", new { facility_id = fac_id });
-
+            Response.RedirectToRoute("ViewFacility", new { facility_id = facility_id });
         }
     }
 }
