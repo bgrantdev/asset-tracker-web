@@ -20,7 +20,7 @@
                 </p>
             </LoggedInTemplate>
             <AnonymousTemplate>
-            
+                
             </AnonymousTemplate>
             </asp:LoginView>
         </div>
