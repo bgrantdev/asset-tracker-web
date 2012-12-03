@@ -28,8 +28,8 @@ namespace asset_tracker_web.Pages.Inventory
                                   where r.id == room_id
                                   select r).Single();
 
-            FacilityName.Text = "Facility: " + selected_facility.name;
-            RoomName.Text = "Room: " + selected_room.name;
+            FacilityName.Text = selected_facility.name;
+            RoomName.Text = selected_room.name;
 
             var room_assets = from a in db.assets
                               where a.room == room_id &&

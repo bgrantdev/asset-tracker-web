@@ -22,6 +22,15 @@ namespace asset_tracker_web.Pages.Inventory {
         protected global::System.Web.UI.WebControls.Menu OptionsMenu;
         
         /// <summary>
+        /// FacilityLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label FacilityLabel;
+        
+        /// <summary>
         /// FacilityName control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace asset_tracker_web.Pages.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label FacilityName;
+        
+        /// <summary>
+        /// RoomLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RoomLabel;
         
         /// <summary>
         /// RoomName control.

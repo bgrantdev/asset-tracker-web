@@ -18,7 +18,8 @@
 
     <div class="infoTableWrapper">
 
-    <asp:Label ID="FacilityName" runat="server" Font-Size="X-Large" Font-Bold="true" Font-Names="Lucida Sans" />
+    <asp:Label ID="FacilityLabel" runat="server" Font-Size="X-Large" Font-Bold="true" Font-Names="Lucida Sans, Sans-Serif" Text="Facility Name: " />
+    <asp:Label ID="FacilityName" runat="server" Font-Size="X-Large" Font-Names="Lucida Sans, Sans-Serif" ForeColor="#0054A3" />
     <br /><br />
     <asp:GridView
         ID="roomGrid"

@@ -54,7 +54,6 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="AssetTrackerAPI.asmx" />
     <Content Include="Images\layout\banner.png" />
     <Content Include="Pages\Inventory\AddEditAsset.aspx" />
     <Content Include="Pages\Inventory\AddEditFacility.aspx" />
@@ -69,7 +68,9 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -96,10 +97,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AssetTracker.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="AssetTrackerAPI.asmx.cs">
-      <DependentUpon>AssetTrackerAPI.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -174,7 +171,9 @@
     <Folder Include="Pages\Barcode\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Web.config" />
+    <Content Include="Account\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="AssetTracker.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -198,7 +197,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50873</DevelopmentServerPort>
+          <DevelopmentServerPort>55121</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

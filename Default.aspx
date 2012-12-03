@@ -6,7 +6,7 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
    
     <div class="introWrapper">
-        <asp:Label runat="server" Font-Bold="true" Font-Names="Lucida Sans, Sans-Serif" Font-Size="XX-Large" Fo Text="Welcome!"></asp:Label>
+        <asp:Label runat="server" Font-Bold="true" Font-Names="Lucida Sans, Sans-Serif" Font-Size="XX-Large" Text="Welcome!"></asp:Label>
         <br />
         <p class="info">
         Welcome to the RBSCRP asset tracker, you can use this web application in conjunction with the RBSCRP asset tracker mobile application in order to keep track of all of your companies assets.

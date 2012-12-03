@@ -40,8 +40,8 @@ namespace asset_tracker_web.Pages.Inventory
                                   where r.id == selected_asset.room
                                   select r).Single();
 
-            FacilityName.Text = "Facility: " + selected_facility.name;
-            RoomName.Text = "Room: " + selected_room.name;
+            FacilityName.Text = selected_facility.name;
+            RoomName.Text = selected_room.name;
             AssetDetails.DataSource = asset;
             AssetDetails.DataBind();
         }
