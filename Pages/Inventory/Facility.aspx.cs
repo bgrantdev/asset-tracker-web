@@ -27,8 +27,8 @@ namespace asset_tracker_web.Pages.Inventory
             FacilityName.Text = selected_facility.name;
 
             var facility_rooms = from r in db.rooms
-                        join a in db.assets on r.id equals a.room into rooms
-                        where r.facility == facility_id
+                        join a in db.assets on r.id equals a.room_id into rooms
+                        where r.facility_id == facility_id
                         select new
                         {
                             ID = r.id,

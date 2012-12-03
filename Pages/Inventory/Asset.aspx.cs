@@ -33,11 +33,11 @@ namespace asset_tracker_web.Pages.Inventory
                                     select a).Single();
 
             facility selected_facility = (from f in db.facilities
-                                          where f.id == selected_asset.facility
+                                          where f.id == selected_asset.facility_id
                                           select f).Single();
 
             room selected_room = (from r in db.rooms
-                                  where r.id == selected_asset.room
+                                  where r.id == selected_asset.room_id
                                   select r).Single();
 
             FacilityName.Text = selected_facility.name;

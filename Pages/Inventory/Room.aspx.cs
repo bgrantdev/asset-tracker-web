@@ -32,8 +32,8 @@ namespace asset_tracker_web.Pages.Inventory
             RoomName.Text = selected_room.name;
 
             var room_assets = from a in db.assets
-                              where a.room == room_id &&
-                              a.facility == facility_id
+                              where a.room_id == room_id &&
+                              a.facility_id == facility_id
                               select new
                               {
                                   ID = a.id,

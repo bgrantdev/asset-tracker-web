@@ -29,7 +29,7 @@ namespace asset_tracker_web.Pages.Inventory
                                  where r.id == room_id
                                  select r).Single();
 
-                facility_id = selected_room.facility;
+                facility_id = selected_room.facility_id;
                 if (!Page.IsPostBack)
                 {
                     RoomName.Text = selected_room.name;
@@ -43,7 +43,7 @@ namespace asset_tracker_web.Pages.Inventory
             if (selected_room == null)
             {
                 selected_room = new room();
-                selected_room.facility = facility_id;
+                selected_room.facility_id = facility_id;
                 selected_room.name = RoomName.Text;
                 selected_room.add_date = DateTime.Now;
                 db.rooms.InsertOnSubmit(selected_room);

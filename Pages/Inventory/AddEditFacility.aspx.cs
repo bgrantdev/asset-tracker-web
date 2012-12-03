@@ -25,7 +25,7 @@ namespace asset_tracker_web.Pages.Inventory
                                      where f.id == facility_id
                                      select f).Single();
                 selected_address = (from a in db.addresses
-                                    where a.facility_id == facility_id
+                                    where a.id == selected_facility.address_id
                                     select a).Single();
 
                 if (!Page.IsPostBack)
@@ -47,18 +47,18 @@ namespace asset_tracker_web.Pages.Inventory
             {
                 selected_facility = new facility();
                 selected_address = new address();
-                selected_facility.user_id = user_id;
-                selected_facility.name = FacilityName.Text;
-                selected_facility.add_date = DateTime.Now;
-                db.facilities.InsertOnSubmit(selected_facility);
-                db.SubmitChanges();
                 selected_address.line_1 = Address1.Text;
                 selected_address.line_2 = Address2.Text;
                 selected_address.city = CityName.Text;
                 selected_address.state = StateName.Text;
                 selected_address.zip = ZipName.Text;
-                selected_address.facility_id = selected_facility.id;
                 db.addresses.InsertOnSubmit(selected_address);
+                db.SubmitChanges();
+                selected_facility.user_id = user_id;
+                selected_facility.name = FacilityName.Text;
+                selected_facility.address_id = selected_address.id;
+                selected_facility.add_date = DateTime.Now;
+                db.facilities.InsertOnSubmit(selected_facility);
                 db.SubmitChanges();
                 
             }

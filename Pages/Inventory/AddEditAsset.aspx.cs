@@ -29,8 +29,8 @@ namespace asset_tracker_web.Pages.Inventory
                                   where a.id == asset_id
                                   select a).Single();
 
-                facility_id = selected_asset.facility;
-                room_id = selected_asset.room;
+                facility_id = selected_asset.facility_id;
+                room_id = selected_asset.room_id;
                 if (!Page.IsPostBack)
                 {
                     AssetName.Text = selected_asset.name;
@@ -45,8 +45,8 @@ namespace asset_tracker_web.Pages.Inventory
             if (selected_asset == null)
             {
                 selected_asset = new asset();
-                selected_asset.facility = facility_id;
-                selected_asset.room = room_id;
+                selected_asset.facility_id = facility_id;
+                selected_asset.room_id = room_id;
                 selected_asset.name = AssetName.Text;
                 selected_asset.last_scan = DateTime.Now;
                 selected_asset.add_date = DateTime.Now;

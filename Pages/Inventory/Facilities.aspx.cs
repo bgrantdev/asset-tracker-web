@@ -17,8 +17,8 @@ namespace asset_tracker_web.Pages.Inventory
         protected void Page_Load(object sender, EventArgs e)
         {
             var facilities = from f in db.facilities
-                             join r in db.rooms on f.id equals r.facility into rooms
-                             join a in db.assets on f.id equals a.facility into assets
+                             join r in db.rooms on f.id equals r.facility_id into rooms
+                             join a in db.assets on f.id equals a.facility_id into assets
                              where f.user_id == user_id
                              select new
                              {
