@@ -31,6 +31,15 @@ namespace asset_tracker_web.Pages.Inventory {
         protected global::System.Web.UI.WebControls.TextBox AssetSku;
         
         /// <summary>
+        /// AssetDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AssetDescription;
+        
+        /// <summary>
         /// SubmitButton control.
         /// </summary>
         /// <remarks>

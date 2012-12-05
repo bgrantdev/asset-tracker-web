@@ -35,6 +35,7 @@ namespace asset_tracker_web.Pages.Inventory
                 {
                     AssetName.Text = selected_asset.name;
                     AssetSku.Text = selected_asset.sku;
+                    AssetDescription.Text = selected_asset.description;
                 }
             }
         }
@@ -51,6 +52,7 @@ namespace asset_tracker_web.Pages.Inventory
                 selected_asset.last_scan = DateTime.Now;
                 selected_asset.add_date = DateTime.Now;
                 selected_asset.sku = AssetSku.Text;
+                selected_asset.description = AssetDescription.Text;
                 db.assets.InsertOnSubmit(selected_asset);
                 db.SubmitChanges();
             }
@@ -59,6 +61,7 @@ namespace asset_tracker_web.Pages.Inventory
             {
                 selected_asset.name = AssetName.Text;
                 selected_asset.sku = AssetSku.Text;
+                selected_asset.description = AssetDescription.Text;
                 db.SubmitChanges();
             }
 

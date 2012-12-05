@@ -14,6 +14,10 @@
     <asp:Label CssClass="label" runat="server" Text="SKU:"></asp:Label>
     <br />
     <asp:TextBox CssClass="field" runat="server" ID="AssetSku"></asp:TextBox>
+    <br />
+    <asp:Label CssClass="label" runat="server" Text="Description"></asp:Label>
+    <br />
+    <asp:TextBox runat="server" Height="250px" Width="250px" ID="AssetDescription" TextMode="MultiLine "></asp:TextBox>
     <br /><br />
 
     <asp:Button runat="server" ID="SubmitButton" Text="Submit" OnClick="submitAsset" /> 
