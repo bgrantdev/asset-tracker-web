@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp">
+      <HintPath>packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -55,6 +58,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Images\layout\banner.png" />
+    <Content Include="Pages\APITest\APITestHome.aspx" />
     <Content Include="Pages\Inventory\AddEditAsset.aspx" />
     <Content Include="Pages\Inventory\AddEditFacility.aspx" />
     <Content Include="Pages\Inventory\AddEditRoom.aspx" />
@@ -107,6 +111,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\APITest\APITestHome.aspx.cs">
+      <DependentUpon>APITestHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\APITest\APITestHome.aspx.designer.cs">
+      <DependentUpon>APITestHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Inventory\AddEditAsset.aspx.cs">
       <DependentUpon>AddEditAsset.aspx</DependentUpon>
@@ -188,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

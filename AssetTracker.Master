@@ -31,6 +31,7 @@
             <Items>
                <asp:MenuItem NavigateUrl="~/Pages/Inventory/Facilities.aspx" Text="Inventory Manager" />  
                <asp:MenuItem NavigateUrl="" Text="Barcode Manager" />
+               <asp:MenuItem NavigateUrl="~/Pages/APITest/APITestHome.aspx" Text="API Testing" />
             </Items>
         </asp:Menu>
         </div>
