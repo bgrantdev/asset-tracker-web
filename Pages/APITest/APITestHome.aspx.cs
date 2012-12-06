@@ -16,7 +16,7 @@ namespace asset_tracker_web.Pages.APITest
         protected void Page_Load(object sender, EventArgs e)
         {
             client.Authenticator = new HttpBasicAuthenticator("rbstester", "rbscrp");
-            RestRequest request = new RestRequest("/api/Asset", Method.GET);
+            RestRequest request = new RestRequest("/api/Facility", Method.GET);
             request.AddHeader("Accept", "text/xml");
             request.RequestFormat = DataFormat.Xml;
             var response = client.Execute(request);
